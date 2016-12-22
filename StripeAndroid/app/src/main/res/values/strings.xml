@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StripeAndroid</string>
+    <string name="com.stripe.publishable_key">pk_live_trW9snyQp72gtgkbeHhAgeN1 </string>
+</resources>
