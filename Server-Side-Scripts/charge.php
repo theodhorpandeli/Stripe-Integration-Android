@@ -1,6 +1,6 @@
 <?php
 define('STRIPE_SECRET_KEY','[YOUR_SECRET_API_KEY]');
-define('STRIPE_PUBLIC_KEY','[YOUR_PUBLISHEABLE_API_KEY]');
+define('STRIPE_PUBLISHABLE_KEY','[YOUR_STRIPE_PUBLISHABLE_KEY]');
 header('Content-Type: application/json');
 $results = array();
 require 'vendor/autoload.php';
