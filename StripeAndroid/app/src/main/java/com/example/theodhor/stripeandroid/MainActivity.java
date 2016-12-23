@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         stripe = new Stripe();
         try {
-            stripe.setDefaultPublishableKey("[YOUR_PK_TEST_KEY_HERE]");
+            stripe.setDefaultPublishableKey("[YOUR_PUBLISHABLE_KEY_TEST_HERE]");
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 String line, newjson = "";
-                URL url = new URL("[YOUR_SERVER_CHARGE_SCRIPT]");
+                URL url = new URL("[YOUR_SERVER_CHARGE_SCRIPT_URL]");
                 try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"))) {
                     while ((line = reader.readLine()) != null) {
                         newjson += line;
