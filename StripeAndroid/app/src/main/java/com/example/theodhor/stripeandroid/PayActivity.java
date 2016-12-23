@@ -51,7 +51,7 @@ public class PayActivity extends AppCompatActivity {
         amount = extras.getInt("plan_price");
         name = extras.getString("plan_name");
         try {
-            stripe = new Stripe("[YOUR_PK_TEST_KEY_HERE]");
+            stripe = new Stripe("[YOUR_PUBLISHABLE_KEY_TEST_HERE]");
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }
@@ -83,7 +83,7 @@ public class PayActivity extends AppCompatActivity {
         */
 
 
-        stripe.createToken(card, "[YOUR_PK_TEST_KEY_HERE]", new TokenCallback() {
+        stripe.createToken(card, "[YOUR_PUBLISHABLE_KEY_TEST_HERE]", new TokenCallback() {
             public void onSuccess(Token token) {
                 // TODO: Send Token information to your backend to initiate a charge
                 Toast.makeText(getApplicationContext(), "Token created: " + token.getId(), Toast.LENGTH_LONG).show();
@@ -126,7 +126,7 @@ public class PayActivity extends AppCompatActivity {
     public void postData(String description, String token,String amount) {
         // Create a new HttpClient and Post Header
         try {
-            URL url = new URL("[YOUR_SERVER_CHARGE_SCRIPT]");
+            URL url = new URL("[YOUR_SERVER_CHARGE_SCRIPT_URL]");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(10000);
             conn.setConnectTimeout(15000);
